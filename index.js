@@ -6,7 +6,7 @@ const initAnimation = async (parseAPNG) => {
     const canvas = document.querySelector('#animation');
     const ctx = canvas.getContext('2d');
 
-    // Fetch the apng.
+    // Fetch the apng as a buffer
     const response = await fetch('./elephant.png');
     const buffer = await response.arrayBuffer();
     const apng = parseAPNG(buffer);
